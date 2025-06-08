@@ -21,12 +21,12 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // ✅ Required for GitHub Pages static export
-  output: "export",
+  // // ✅ Required for GitHub Pages static export
+  // output: "export",
 
-  // ✅ Must be your repo name if deploying to <username>.github.io/<repo>
-  basePath:
-    process.env.GITHUB_PAGES === "true" ? "/daily-logs-at-workspace" : "/auth",
+  // // ✅ Must be your repo name if deploying to <username>.github.io/<repo>
+  // basePath:
+  //   process.env.GITHUB_PAGES === "true" ? "/daily-logs-at-workspace" : "/auth",
 
   eslint: {
     ignoreDuringBuilds: true,
