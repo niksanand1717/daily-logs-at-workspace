@@ -77,7 +77,7 @@ export function AuthProviders({ children }: { children: React.ReactNode }) {
     // Handle redirect after login
     const targetPath =
       appState?.returnTo ||
-      (isDevelopment ? "/dashboard" : "/daily-logs-at-workspace/aabddhors");
+      (isDevelopment ? "/dashboard" : "/daily-logs-at-workspace/dashboard");
 
     router.push(targetPath);
   };
