@@ -57,7 +57,7 @@ jobs:
         run: npx next build && npx next export
         env:
           # Private environment variables from GitHub secrets
-          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+          MY_MONGODB_URI: ${{ secrets.MY_MONGODB_URI }}
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
           AUTH0_CLIENT_SECRET: ${{ secrets.AUTH0_CLIENT_SECRET }}
           NEXT_PUBLIC_AUTH0_SECRET: ${{ secrets.NEXT_PUBLIC_AUTH0_SECRET }}
