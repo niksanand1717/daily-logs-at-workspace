@@ -2,11 +2,9 @@ import { type NextRequest, NextResponse } from "next/server";
 import clientPromise from "@/lib/mongodb";
 import type { Note } from "@/types/note";
 
-export const dynamic = "force-static";
-
 export async function GET(request: NextRequest) {
   try {
-    const { searchParams } = new URL(request.url);
+    const searchParams = request.nextUrl.searchParams;
     const date = searchParams.get("date");
     const userId = searchParams.get("userId");
 
