@@ -25,7 +25,8 @@ const nextConfig = {
   output: "export",
 
   // ✅ Must be your repo name if deploying to <username>.github.io/<repo>
-  basePath: "/daily-logs-at-workspace",
+  basePath:
+    process.env.GITHUB_PAGES === "true" ? "/daily-logs-at-workspace" : "/auth",
 
   eslint: {
     ignoreDuringBuilds: true,
@@ -40,9 +41,6 @@ const nextConfig = {
   // ✅ These have no effect on static exports, can be removed or ignored
   serverRuntimeConfig: {
     port: 9990,
-  },
-  experimental: {
-    allowedDevOrigins: ["192.168.150.*"],
   },
 };
 
